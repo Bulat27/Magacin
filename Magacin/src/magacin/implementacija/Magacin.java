@@ -11,6 +11,7 @@ public class Magacin implements MagacinInterfejs {
 
 	@Override
 	public void dodajArtikal(Artikal artikal) {
+		
 		boolean nasao = false;
 
 		for (Artikal a : artikli) {
@@ -19,20 +20,27 @@ public class Magacin implements MagacinInterfejs {
 				nasao = true;
 			}
 		}
-		
+
 		if (!nasao)
 			artikli.add(artikal);
 	}
 
 	@Override
 	public void izbaciArtikal(Artikal artikal) {
-		// TODO Auto-generated method stub
-
+		for (Artikal a : artikli) {
+			if (a.equals(artikal)) {
+				a.setKolicina(a.getKolicina() - 1);
+			}
+		}
 	}
 
 	@Override
 	public Artikal vratiArtikal(int sifra) {
-		// TODO Auto-generated method stub
+		for (Artikal a : artikli) {
+			if (a.getSifra() == sifra) {
+				return a;
+			}
+		}
 		return null;
 	}
 }

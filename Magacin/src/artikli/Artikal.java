@@ -14,6 +14,7 @@ public abstract class Artikal {
 	}
 
 	public void setNaziv(String naziv) {
+		if(naziv != null && !naziv.isEmpty())
 		this.naziv = naziv;
 	}
 
@@ -22,6 +23,7 @@ public abstract class Artikal {
 	}
 
 	public void setSifra(int sifra) {
+		if(sifra >= 0)
 		this.sifra = sifra;
 	}
 
@@ -30,6 +32,7 @@ public abstract class Artikal {
 	}
 
 	public void setOpis(String opis) {
+		if(opis != null && !opis.isEmpty())
 		this.opis = opis;
 	}
 
@@ -38,6 +41,7 @@ public abstract class Artikal {
 	}
 
 	public void setKolicina(int kolicina) {
+		if(kolicina >= 0)
 		this.kolicina = kolicina;
 	}
 

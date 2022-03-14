@@ -11,7 +11,6 @@ public class Magacin implements MagacinInterfejs {
 
 	@Override
 	public void dodajArtikal(Artikal artikal) {
-		
 		boolean nasao = false;
 
 		for (Artikal a : artikli) {
